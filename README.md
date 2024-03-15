@@ -21,3 +21,6 @@ kill run process and force it
 
 run and forward the port
 `docker run -p [port outside]:[port inside] -d --name [name] [image name]`
+
+interactive mode
+`docker exec -it [name] bash`
