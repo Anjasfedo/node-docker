@@ -24,3 +24,6 @@ run and forward the port
 
 interactive mode
 `docker exec -it [name] bash`
+
+sync file with volume
+`docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer] -p [port outside]:[port inside] -d --name [name] [image name]`
