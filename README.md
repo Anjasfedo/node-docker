@@ -31,3 +31,5 @@ sync file with volume
 show logs on run
 `docker logs [name]`
 
+anonymous volume hack
+`docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer] -v /app/node_modules -p [port outside]:[port inside] -d --name [name] [image name]`
