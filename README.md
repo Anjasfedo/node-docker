@@ -67,3 +67,9 @@ down the compose
 
 force build image with docker compose
 `docker-compose -up --build -d`
+
+run docker compose dev & prod compose
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d`
+
+then down it
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] down -v`
