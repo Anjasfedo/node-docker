@@ -58,3 +58,12 @@ delete all volume
 
 delete volume when delete run container
 `docker rm [name] -fv`
+
+use docker-compose.yml file
+`docker-compose up -d`
+
+down the compose
+`docker-compose down -v`
+
+force build image with docker compose
+`docker-compose -up --build -d`
