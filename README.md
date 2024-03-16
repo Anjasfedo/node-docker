@@ -43,3 +43,6 @@ overwrite enviroment variable when run
 check enviroment variable on run
 `docker exec -it [name] bash`
 `printenv`
+
+load .env file
+`docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer]:ro -v /app/node_modules --env-file [path to env (./.env)] -p [port outside]:[port inside] -d --name [name] [image name]`
