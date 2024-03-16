@@ -33,3 +33,6 @@ show logs on run
 
 anonymous volume hack
 `docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer] -v /app/node_modules -p [port outside]:[port inside] -d --name [name] [image name]`
+
+Read-Only bind mount
+`docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer]:ro -v /app/node_modules -p [port outside]:[port inside] -d --name [name] [image name]`
