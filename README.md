@@ -46,3 +46,15 @@ check enviroment variable on run
 
 load .env file
 `docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer]:ro -v /app/node_modules --env-file [path to env (./.env)] -p [port outside]:[port inside] -d --name [name] [image name]`
+
+list some volumes
+`docker volume ls`
+
+delete volume
+`docker volume rm [volume name]`
+
+delete all volume
+`docker volume prune`
+
+delete volume when delete run container
+`docker rm [name] -fv`
