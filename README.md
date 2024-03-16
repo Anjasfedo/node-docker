@@ -36,3 +36,10 @@ anonymous volume hack
 
 Read-Only bind mount
 `docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer]:ro -v /app/node_modules -p [port outside]:[port inside] -d --name [name] [image name]`
+
+overwrite enviroment variable when run
+`docker run -v [pathtofolderonlocation (%cd%, ${pwd}, $(pwd))]:[pathtofolderoncontainer]:ro -v /app/node_modules --env [key=value] -p [port outside]:[port inside] -d --name [name] [image name]`
+
+check enviroment variable on run
+`docker exec -it [name] bash`
+`printenv`
