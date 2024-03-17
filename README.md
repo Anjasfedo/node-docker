@@ -81,3 +81,8 @@ connect it when exec
 `docker exec -it [name] mongosh -u [username] -p [password]`
 
 delete without run container, open run to execpt it, then prune
+
+show more detail of container
+`docker inspect [name]`
+
+
