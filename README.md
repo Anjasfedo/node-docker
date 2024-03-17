@@ -90,3 +90,6 @@ list the networks
 
 show information of spesific network
 `docker network inspect [network name]`
+
+run spesific service
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --no-deps [service name]`
