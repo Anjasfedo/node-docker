@@ -73,3 +73,9 @@ run docker compose dev & prod compose
 
 then down it
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] down -v`
+
+connect to mongodb database container
+`mongosh -u [username] -p [password]`
+
+connect it when exec
+`docker exec -it [name] mongosh -u [username] -p [password]`
