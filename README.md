@@ -85,4 +85,8 @@ delete without run container, open run to execpt it, then prune
 show more detail of container
 `docker inspect [name]`
 
+list the networks
+`docker network ls`
 
+show information of spesific network
+`docker network inspect [network name]`

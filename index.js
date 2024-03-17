@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 mongoose
-  .connect("mongodb://root:example@172.26.0.2:27017/?authSource=admin")
+  .connect("mongodb://root:example@mongo:27017/?authSource=admin")
   .then(() => console.log("Connected"))
   .catch((e) => console.log(e));
 
