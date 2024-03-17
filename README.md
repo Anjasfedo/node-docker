@@ -58,3 +58,35 @@ delete all volume
 
 delete volume when delete run container
 `docker rm [name] -fv`
+
+use docker-compose.yml file
+`docker-compose up -d`
+
+down the compose
+`docker-compose down -v`
+
+force build image with docker compose
+`docker-compose -up --build -d`
+
+run docker compose dev & prod compose
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d`
+
+then down it
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] down -v`
+
+connect to mongodb database container
+`mongosh -u [username] -p [password]`
+
+connect it when exec
+`docker exec -it [name] mongosh -u [username] -p [password]`
+
+delete without run container, open run to execpt it, then prune
+
+show more detail of container
+`docker inspect [name]`
+
+list the networks
+`docker network ls`
+
+show information of spesific network
+`docker network inspect [network name]`
