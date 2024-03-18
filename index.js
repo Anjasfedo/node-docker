@@ -4,18 +4,21 @@ const {
   MONGO_PASSWORD,
   MONGO_IP,
   MONGO_PORT,
-  REDIS_URL,
+  REDIS_IP,
   REDIS_PORT,
   SESSION_SECRET,
 } = require("./config/config");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const redis = require("redis");
-let RedisStore = require("connect-redis").default;
-let redisClient = redis.createClient({
-  host: REDIS_URL,
-  post: REDIS_PORT,
+const RedisStore = require("connect-redis").default;
+
+const REDIS_URL = `redis://:@${REDIS_IP}:${parseInt(REDIS_PORT)}`;
+const redisClient = redis.createClient({
+  url: REDIS_URL,
 });
+redisClient.connect().catch(console.error);
+
 const postRouter = require("./routes/postRoute");
 const userRouter = require("./routes/userRoute");
 

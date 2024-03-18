@@ -93,3 +93,8 @@ show information of spesific network
 
 run spesific service
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --no-deps [service name]`
+
+open redis cli
+`docker exec -it [name] redis-cli`
+
+
