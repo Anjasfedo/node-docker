@@ -1,4 +1,5 @@
 const express = require("express");
+const protect = require("../middlewares/authMiddleware")
 
 const {
   getPosts,
@@ -10,7 +11,7 @@ const {
 
 const router = express.Router();
 
-router.route("/").get(getPosts).post(createPost);
-router.route("/:id").get(getPost).put(updatePost).delete(deletePost);
+router.route("/").get(protect, getPosts).post(protect, createPost);
+router.route("/:id").get(protect, getPost).put(protect, updatePost).delete(protect, deletePost);
 
 module.exports = router;
