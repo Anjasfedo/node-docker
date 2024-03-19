@@ -108,3 +108,15 @@ spesific build image
 
 spesific build image without dependency
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --build --no-deps [name]`
+
+force the build image
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --force-recreate [name]`
+
+force the build image without dependency
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --force-recreate --no-deps  [name]`
+
+push docker image to docker hub
+`docker push [image name]`
+
+change docker image name
+`docker image tag [current name] [new name]`
