@@ -9,6 +9,7 @@ const {
   SESSION_SECRET,
 } = require("./config/config");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const session = require("express-session");
 const redis = require("redis");
 const RedisStore = require("connect-redis").default;
@@ -38,6 +39,10 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+app.enable("trust proxy");
+
+app.use(cors({}));
+
 app.use(
   session({
     store: new RedisStore({ client: redisClient }),
@@ -54,7 +59,7 @@ app.use(
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api/v1", (req, res) => {
   res.send("<h1>Hi Develop</h1>");
 });
 
