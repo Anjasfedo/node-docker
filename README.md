@@ -138,3 +138,11 @@ pull image from docker hub
 
 run watchtower to watch the image changes
 `docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower [name]`
+
+show docker info
+`docker info`
+
+activate docker swarm
+`docker swarm init`
+
+
