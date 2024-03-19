@@ -132,3 +132,6 @@ push image into docker hub
 
 push spesific image into docker hub
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] push [name]`
+
+pull image from docker hub
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] pull`
