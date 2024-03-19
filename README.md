@@ -97,4 +97,8 @@ run spesific service
 open redis cli
 `docker exec -it [name] redis-cli`
 
+scaling app
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --scale [service name]=[number of scale]`
 
+build and renew anon volume
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --build -V`
