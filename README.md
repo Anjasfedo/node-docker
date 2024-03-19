@@ -135,3 +135,6 @@ push spesific image into docker hub
 
 pull image from docker hub
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] pull`
+
+run watchtower to watch the image changes
+`docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower [name]`
