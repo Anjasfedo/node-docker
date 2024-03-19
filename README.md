@@ -145,4 +145,14 @@ show docker info
 activate docker swarm
 `docker swarm init`
 
+run docker swarm
+`docker stack deploy -c [compose file] -c [compose file.prod] [stack name]`
 
+show lists of node
+`docker node ls`
+
+list the stack
+`docker stack ls`
+
+list run service
+`docker stack services [stack name]`
