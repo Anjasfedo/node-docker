@@ -102,3 +102,9 @@ scaling app
 
 build and renew anon volume
 `docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --build -V`
+
+spesific build image
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --build [name]`
+
+spesific build image without dependency
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] up -d --build --no-deps [name]`

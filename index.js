@@ -60,7 +60,7 @@ app.use(
 app.use(express.json());
 
 app.get("/api/v1", (req, res) => {
-  res.send("<h1>Hi Develop!!!!!!!!</h1>");
+  res.send("<h1>Hi Developer</h1>");
 });
 
 app.use("/api/v1/posts", postRouter);
