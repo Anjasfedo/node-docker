@@ -120,3 +120,15 @@ push docker image to docker hub
 
 change docker image name
 `docker image tag [current name] [new name]`
+
+build image without run it
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] build`
+
+build spesific image
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] build [name]`
+
+push image into docker hub
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] push`
+
+push spesific image into docker hub
+`docker-compose -f docker-compose.yml -f [compose file to overwrite (docker-compose.dev.yml)] push [name]`
